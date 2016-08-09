@@ -10,6 +10,6 @@ worker = Task.async fn -> Fib.of(20) end
 IO.puts "Do something else"
 
 IO.puts "Waiting for task"
-result = Task.wait(worker)
+result = Task.await(worker)
 
 IO.puts "The result is #{result}"
