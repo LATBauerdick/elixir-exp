@@ -1,7 +1,7 @@
 defmodule Fib do
-  def of(0); do 1
-  def of(1); do 1
-  def of(n); of(n-2)+of(n-1)
+  def of(0), do 1
+  def of(1), do 1
+  def of(n), of(n-2)+of(n-1)
 end
 
 IO.puts "Starting task"
