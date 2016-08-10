@@ -41,7 +41,7 @@ defmodule WordListLoader do
 
   defp load_task(file_name) do
     File.stream!(file_name, [], :line)
-    |> Enum.map(&String.strip//1)
+    |> Enum.map(&String.strip/1)
     |> Dictionary.add_words
   end
   
