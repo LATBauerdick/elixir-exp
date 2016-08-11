@@ -11,7 +11,7 @@ defmodule Dictionary do
   def add_words(words), do:
     Agent.update(@name, &do_add_words(&1, words))
 
-  def anagram_of(word), do:
+  def anagrams_of(word), do:
     Agent.get(@name, &Map.get(&1, signature_of(word)))
 
   ##########
